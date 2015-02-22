@@ -1,0 +1,22 @@
+[color]
+	ui = auto
+[core]
+	editor = subl -n -w
+[alias]
+	stat = status
+	com = commit
+	chk = checkout
+	diffh = diff HEAD
+	bran = branch
+	cancel = reset --soft HEAD^
+	recom = commit --amend
+	mrg = merge --no-ff
+	slog-without-color = log --pretty=format:'[%ad] %h : %s' --date=iso
+	slog = log --pretty=format:'%C(yellow)[%ad] %C(green)%h %Creset: %s' --date=iso
+	delete-brans = !git branch --merged | grep -v \\* | grep -v 'master\\|release' | xargs -I % git branch -d %
+[push]
+	default = simple
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f

@@ -1,0 +1,9 @@
+# shell
+zsh_files=(my.zsh git.zsh node.zsh postgres.zsh ruby.zsh)
+for i in $zsh_files; do
+  cp ~/dotfiles/shell/custom/$i ~/.oh-my-zsh/custom/$i
+done
+cp -r ~/dotfiles/shell/custom/themes ~/.oh-my-zsh/custom/
+
+# git
+cp ~/dotfiles/git/.gitconfig ~/.gitconfig
