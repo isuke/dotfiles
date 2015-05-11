@@ -1,4 +1,10 @@
-echo 'read my.zsh'
+echo 'read common.zsh'
+
+### Path ###
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+### Theme ###
+ZSH_THEME="my_avit"
 
 ### Complement ###
 autoload -U compinit; compinit        # 補完機能を有効にする
@@ -13,9 +19,6 @@ HISTFILE=~/.zsh_history   # ヒストリを保存するファイル
 HISTSIZE=10000            # メモリに保存されるヒストリの件数
 SAVEHIST=10000            # 保存されるヒストリの件数
 setopt bang_hist          # !を使ったヒストリ展開を行う(d)
-setopt extended_history   # ヒストリに実行時間も保存する
-setopt hist_ignore_dups   # 直前と同じコマンドはヒストリに追加しない
-# setopt share_history      # 他のシェルのヒストリをリアルタイムで共有する
 setopt hist_reduce_blanks # 余分なスペースを削除してヒストリに保存する
 autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end
@@ -24,7 +27,11 @@ bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
 
 ### Commands ###
+# dotfiles
+alias dotfiles="zsh dotfiles.zsh"
+
 # history
+unalias history
 alias h='history'
 
 # touch
