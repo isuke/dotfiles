@@ -11,5 +11,7 @@ cp -r $DOTFILES_PATH/shell/custom/themes $HOME/.oh-my-zsh/custom/
 # git
 cp $DOTFILES_PATH/git/.gitconfig $HOME/.gitconfig
 
+# pry
+cp $DOTFILES_PATH/pry/.pryrc $HOME/.pryrc
 
 echo finish
