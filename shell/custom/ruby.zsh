@@ -4,7 +4,9 @@ echo 'read ruby.zsh'
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Bundler
-alias bundle_install_to_vendor='bundle install --path=vendor/bundle --binstubs=vendor/bin --without production'
+alias bi_default='bundle install --path=vendor/bundle --binstubs=vendor/bin --without production'
+alias bc="bundle clean"
+alias bes="bundle exec spring"
 
 # Rails
 alias rails_new='bundle exec rails new . --skip-bundle -T --no-ri --no-rdoc'
