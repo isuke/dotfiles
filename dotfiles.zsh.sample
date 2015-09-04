@@ -2,7 +2,7 @@ DOTFILES_PATH=$HOME/dotfiles
 
 # shell
 cp $DOTFILES_PATH/shell/.zshrc $HOME/.zshrc
-zsh_files=(common.zsh git.zsh node.zsh postgres.zsh ruby.zsh heroku.zsh)
+zsh_files=(common.zsh git.zsh node.zsh postgres.zsh ruby.zsh heroku.zsh direnv.zsh)
 for i in $zsh_files; do
   cp $DOTFILES_PATH/shell/custom/$i $HOME/.oh-my-zsh/custom/$i
 done
