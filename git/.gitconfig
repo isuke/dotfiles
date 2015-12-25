@@ -7,6 +7,7 @@
 	com = commit
 	chk = checkout
 	diffh = diff HEAD
+	diffhh = diff HEAD^
 	bran = branch
 	cancel = reset --soft HEAD^
 	recom = commit --amend
