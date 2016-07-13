@@ -2,6 +2,7 @@
 	ui = auto
 [core]
 	editor = subl -n -w
+	excludesfile = /Users/isuke/.gitignore_global
 [alias]
 	stat = status
 	com = commit

@@ -9,7 +9,8 @@ done
 cp -r $DOTFILES_PATH/shell/custom/themes $HOME/.oh-my-zsh/custom/
 
 # git
-cp $DOTFILES_PATH/git/.gitconfig $HOME/.gitconfig
+cp $DOTFILES_PATH/git/.gitconfig        $HOME/.gitconfig
+cp $DOTFILES_PATH/git/.gitignore_global $HOME/.gitignore_global
 
 # pry
 cp $DOTFILES_PATH/pry/.pryrc $HOME/.pryrc
