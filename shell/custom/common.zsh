@@ -40,3 +40,6 @@ alias tunzip='tar xvf'
 
 # less
 alias less='less -N -S -#4'
+
+# sublime
+alias sublime_package="~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User"
