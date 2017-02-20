@@ -1,16 +1,29 @@
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+source ~/.zplug/init.zsh
 
-alias zshconfig="subl $HOME/.zshrc"
-alias zshload="source $HOME/.zshrc"
+#
+# Theme
+#
+zplug "eendroroy/alien"
 
-# Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=$ZSH/custom
+#
+# Plugin
+#
+zplug "b4b4r07/enhancd", use:enhancd.sh
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-history-substring-search"
+zplug "zsh-users/zsh-syntax-highlighting"
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git bundler)
+#
+# my custom
+#
+zplug "isuke/shells"
 
-source $ZSH/oh-my-zsh.sh
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
 
+zplug load --verbose

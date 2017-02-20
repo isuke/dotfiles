@@ -1,16 +1,13 @@
 DOTFILES_PATH=$HOME/dotfiles
 
 # shell
-cp $DOTFILES_PATH/shell/.zshrc $HOME/.zshrc
-zsh_files=(common.zsh git.zsh node.zsh postgres.zsh ruby.zsh heroku.zsh direnv.zsh elixir.zsh)
-for i in $zsh_files; do
-  cp $DOTFILES_PATH/shell/custom/$i $HOME/.oh-my-zsh/custom/$i
-done
-cp -r $DOTFILES_PATH/shell/custom/themes $HOME/.oh-my-zsh/custom/
+cp $DOTFILES_PATH/shell/.zshrc     $HOME/.zshrc
 
 # git
 cp $DOTFILES_PATH/git/.gitconfig        $HOME/.gitconfig
 cp $DOTFILES_PATH/git/.gitignore_global $HOME/.gitignore_global
+git config --global user.name foo
+git config --global user.email foo@gmail.com
 
 # pry
 cp $DOTFILES_PATH/pry/.pryrc $HOME/.pryrc
