@@ -3,7 +3,7 @@ source ~/.zplug/init.zsh
 #
 # Theme
 #
-zplug "eendroroy/alien"
+zplug "themes/mortalscumbag", from:oh-my-zsh
 
 #
 # Plugin
