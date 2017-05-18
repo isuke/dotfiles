@@ -15,6 +15,7 @@
 	bran = branch
 	cancel = reset --soft HEAD^
 	cpush = !git push origin `git rev-parse --abbrev-ref HEAD`
+	cpull = !git pull origin `git rev-parse --abbrev-ref HEAD`
 	mrg = merge --no-ff
 	slog-without-color = log --pretty=format:'[%ad] %h : %s' --date=iso
 	slog = log --pretty=format:'%C(yellow)[%ad] %C(green)%h %Creset: %s' --date=iso
