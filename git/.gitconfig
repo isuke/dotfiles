@@ -2,20 +2,20 @@
 	ui = auto
 [core]
 	editor = subl -n -w
-	excludesfile = /Users/isuke/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [alias]
 	stat = status
 	com = commit
-	fcom = commit --no-verify
 	recom = commit --amend
-	frecom = commit --amend --no-verify
 	chk = checkout
 	diffh = diff HEAD
 	diffhh = diff HEAD^
 	bran = branch
+	cbran = rev-parse --abbrev-ref HEAD
 	cancel = reset --soft HEAD^
-	cpush = !git push origin `git rev-parse --abbrev-ref HEAD`
-	cpull = !git pull origin `git rev-parse --abbrev-ref HEAD`
+	cpush = !git push origin `git cbran`
+	cpull = !git pull origin `git cbran`
+	fpull = !git fetch origin `git cbran` && git reset --hard origin/`git cbran`
 	mrg = merge --no-ff
 	slog-without-color = log --pretty=format:'[%ad] %h : %s' --date=iso
 	slog = log --pretty=format:'%C(yellow)[%ad] %C(green)%h %Creset: %s' --date=iso
