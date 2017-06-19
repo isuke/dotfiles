@@ -6,8 +6,10 @@ cp $DOTFILES_PATH/shell/.zshrc     $HOME/.zshrc
 # git
 cp $DOTFILES_PATH/git/.gitconfig        $HOME/.gitconfig
 cp $DOTFILES_PATH/git/.gitignore_global $HOME/.gitignore_global
+cp $DOTFILES_PATH/git/.gitcommit_template $HOME/.gitcommit_template
 git config --global user.name foo
 git config --global user.email foo@gmail.com
+git config --global commit.template $HOME/.gitcommit_template
 
 # pry
 cp $DOTFILES_PATH/pry/.pryrc $HOME/.pryrc

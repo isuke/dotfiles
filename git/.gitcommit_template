@@ -1,0 +1,14 @@
+
+
+# :heavy_plus_sign:   when implementing function
+# :heavy_minus_sign:  when removing function
+# :art:               when refactoring
+# :rocket:            when improving performance
+# :pencil2:           when writing docs
+# :sunny:             when fixing a bug
+# :green_heart:       when fixing the CI build
+# :white_check_mark:  when adding tests
+# :lock:              when dealing with security
+# :arrow_up:          when upgrading dependencies
+# :arrow_down:        when downgrading dependencies
+# :tada:              when celebrating
