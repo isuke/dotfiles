@@ -16,6 +16,7 @@
 	cpush = !git push origin `git cbran`
 	cpull = !git pull origin `git cbran`
 	fpull = !git fetch origin `git cbran` && git reset --hard origin/`git cbran`
+	retag = "!f () { git tag -d $1;git tag $1&&echo Create tag \\'$1\\';};f"
 	mrg = merge --no-ff
 	slog-without-color = log --pretty=format:'[%ad] %h : %s' --date=iso
 	slog = log --pretty=format:'%C(yellow)[%ad] %C(green)%h %Creset: %s' --date=iso
