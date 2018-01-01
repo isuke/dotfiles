@@ -1,12 +1,12 @@
 [color]
 	ui = auto
 [core]
-	editor = subl -n -w
+	editor = code --wait
 	excludesfile = ~/.gitignore_global
 [alias]
 	stat = status
 	com = commit
-	recom = commit --amend
+	recom = commit --amend --no-edit
 	chk = checkout
 	diffh = diff HEAD
 	diffhh = diff HEAD^
