@@ -8,6 +8,7 @@
 	com = commit
 	recom = commit --amend --no-edit
 	chk = checkout
+	chk-cleanbran = checkout --orphan
 	diffh = diff HEAD
 	diffhh = diff HEAD^
 	diffc = diff --cached
