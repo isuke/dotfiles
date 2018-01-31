@@ -14,4 +14,7 @@ git config --global commit.template $HOME/.gitcommit_template
 # pry
 cp $DOTFILES_PATH/pry/.pryrc $HOME/.pryrc
 
+# cz
+cp $DOTFILES_PATH/cz/.czrc $HOME/.czrc
+
 echo finish
