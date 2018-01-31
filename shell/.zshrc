@@ -1,3 +1,5 @@
+source ~/.my.zsh
+
 source ~/.zplug/init.zsh
 
 #

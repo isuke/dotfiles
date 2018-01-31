@@ -3,7 +3,7 @@
 ## usage
 
 ```sh
-cp dotfiles.zsh.sample dotfiles.zsh
-vi dotfiles.zsh # customize
-zsh dotfiles.zsh
+$ zsh dotfiles.zsh
+Input your name > foo
+Input your email > foogmail.com
 ```
