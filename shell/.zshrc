@@ -10,7 +10,7 @@ zplug "zplug/zplug"
 #
 # Theme
 #
-zplug "themes/mortalscumbag", from:oh-my-zsh
+zplug "isuke/droolscar", as:theme
 
 #
 # Plugin
