@@ -3,7 +3,7 @@
 ## usage
 
 ```sh
-$ zsh dotfiles.zsh
+$ source dotfiles.zsh
 Input your name > foo
-Input your email > foogmail.com
+Input your email > foo@gmail.com
 ```

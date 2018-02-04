@@ -1,17 +1,17 @@
 DOTFILES_PATH=$HOME/dotfiles
 MY_FILE_PATH=$HOME/.my.zsh
 
-if [ -e $MY_FILE_PATH ]; then
-  echo "${MY_FILE_PATH} is exists"
-  source $MY_FILE_PATH
-else
+touch $MY_FILE_PATH
+
+if [ -z "$NAME" ]; then
   echo -n "Input your name > "
   read NAME
+  echo "export NAME=${NAME}" >> $MY_FILE_PATH
+fi
+
+if [ -z "$EMAIL" ]; then
   echo -n "Input your email > "
   read EMAIL
-
-  touch $MY_FILE_PATH
-  echo "export NAME=${NAME}" >> $MY_FILE_PATH
   echo "export EMAIL=${EMAIL}" >> $MY_FILE_PATH
 fi
 
