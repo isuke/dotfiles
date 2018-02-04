@@ -6,7 +6,9 @@
 [alias]
 	stat = status
 	com = commit
+	wip = commit -m 'WIP'
 	recom = commit --amend --no-edit
+	recom-reword = commit --amend
 	chk = checkout
 	chk-cleanbran = checkout --orphan
 	diffh = diff HEAD
@@ -20,7 +22,6 @@
 	fpull = !git fetch origin `git cbran` && git reset --hard origin/`git cbran`
 	retag = "!f () { git tag -d $1;git tag $1&&echo Create tag \\'$1\\';};f"
 	mrg = merge --no-ff
-	slog-without-color = log --pretty=format:'[%ad] %h : %s' --date=iso
 	slog = log --pretty=format:'%C(yellow)[%ad] %C(green)%h %Creset: %s' --date=iso
 	slog-name = log --pretty=format:'%C(yellow)[%ad] %C(green)%h %Creset: %C(blue)%an %Creset: %s' --date=iso
 	delete-brans = !git branch --merged | grep -v \\* | grep -v 'master\\|release' | xargs -I % git branch -d %
