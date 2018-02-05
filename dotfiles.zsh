@@ -16,20 +16,21 @@ if [ -z "$EMAIL" ]; then
 fi
 
 # shell
-cp $DOTFILES_PATH/shell/.zshrc $HOME/.zshrc
+cp $DOTFILES_PATH/shell/.zshrc $HOME
 
 # git
-cp $DOTFILES_PATH/git/.gitconfig          $HOME/.gitconfig
-cp $DOTFILES_PATH/git/.gitignore_global   $HOME/.gitignore_global
-cp $DOTFILES_PATH/git/.gitcommit_template $HOME/.gitcommit_template
+cp $DOTFILES_PATH/git/.gitconfig                     $HOME
+cp $DOTFILES_PATH/git/.gitignore_global              $HOME
+cp $DOTFILES_PATH/git/.gitcommit_template_emoji      $HOME
+cp $DOTFILES_PATH/git/.gitcommit_template_commitizen $HOME
 git config --global user.name $NAME
 git config --global user.email $EMAIL
-git config --global commit.template $HOME/.gitcommit_template
+git config --global commit.template $HOME/.gitcommit_template_commitizen
 
 # pry
-cp $DOTFILES_PATH/pry/.pryrc $HOME/.pryrc
+cp $DOTFILES_PATH/pry/.pryrc $HOME
 
 # cz
-cp $DOTFILES_PATH/cz/.czrc $HOME/.czrc
+cp $DOTFILES_PATH/cz/.czrc $HOME
 
 source $HOME/.zshrc
