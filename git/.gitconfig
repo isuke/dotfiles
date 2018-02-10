@@ -9,6 +9,7 @@
 	wip = commit -m 'WIP'
 	recom = commit --amend --no-edit
 	recom-reword = commit --amend
+	con = consistent -i
 	chk = checkout
 	chk-cleanbran = checkout --orphan
 	diffh = diff HEAD
