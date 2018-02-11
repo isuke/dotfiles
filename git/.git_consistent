@@ -59,13 +59,24 @@ scope:
       name: "front"
       description: 'front page'
     -
-      name: "admin"
-      description: 'admin page'
+      name: "ope"
+      description: 'ope page'
+    -
+      name: "api"
+      description: 'inner api'
 subject:
   type: string
   required: true
   description: 'The subject contains succinct description of the change'
+  rules:
+      firstLatter: lower
+      dotAtEnd: false
+      ascii: false
 body:
   type: text
   required: false
   description: 'The body contains details of the change'
+  rules:
+      firstLatter: upper
+      dotAtEnd: true
+      ascii: false
