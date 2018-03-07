@@ -30,7 +30,7 @@ set diff-highlight = true
 # Colors
 #
 color  diff-header       default magenta
-color  diff-chunk        black   whit
+color  diff-chunk        black   white
 
 #
 # Key binds
