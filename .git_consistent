@@ -3,15 +3,15 @@ subject:
   required: true
   description: 'The subject contains succinct description of the change'
   rules:
-      firstLatter: upper
-      dotAtEnd: false
-      notAscii: false
+    firstLatter: upper
+    dotAtEnd: false
+    notAscii: false
 body:
   type: text
   required: false
   default: ''
   description: 'The body contains details of the change'
   rules:
-      firstLatter: upper
-      dotAtEnd: true
-      notAscii: false
+    firstLatter: upper
+    dotAtEnd: true
+    notAscii: false
