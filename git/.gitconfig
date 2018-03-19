@@ -11,18 +11,19 @@
 	recom-reword = commit --amend
 	con = consistent -i -t
 	chk = checkout
-	chk-cleanbran = checkout --orphan
+	chk-fork = "!f () { git checkout -b +`git cbran`+$1; };f"
 	diffh = diff HEAD
 	diffhh = diff HEAD^
 	diffc = diff --cached
 	bran = branch
-	bran-backup = !git branch `git cbran`-backup
+	bran-backup = !git branch @`git cbran`-backup
+	cleanbran = checkout --orphan
 	cbran = rev-parse --abbrev-ref HEAD
 	cancel = reset --soft HEAD^
 	cpush = !git push origin `git cbran`
 	cpull = !git pull origin `git cbran`
 	fpull = !git fetch origin `git cbran` && git reset --hard origin/`git cbran`
-	retag = "!f () { git tag -d $1;git tag $1&&echo Create tag \\'$1\\';};f"
+	retag = "!f () { git tag -d $1;git tag $1&&echo Create tag \\'$1\\'; };f"
 	mrg = merge --no-ff
 	slog = log --pretty=format:'%C(yellow)[%ad] %C(green)%h %Creset: %s' --date=iso
 	slog-name = log --pretty=format:'%C(yellow)[%ad] %C(green)%h %Creset: %C(blue)%an %Creset: %s' --date=iso
