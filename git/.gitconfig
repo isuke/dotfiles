@@ -11,7 +11,7 @@
 	recom-reword = commit --amend
 	con = consistent -i -t
 	chk = checkout
-	chk-fork = "!f () { git checkout -b +`git cbran`+$1; };f"
+	chk-fork = "!f () { git checkout -b $`git cbran`+$1; };f"
 	diffh = diff HEAD
 	diffhh = diff HEAD^
 	diffc = diff --cached
