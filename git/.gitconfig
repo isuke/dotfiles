@@ -6,7 +6,9 @@
 [alias]
 	stat = status
 	com = commit
-	wip = commit -m 'WIP'
+	wip = "!f () { git commit -m \"WIP $1\"; };f"
+	wipc = "!f () { git commit -m \"WIP $1 [ci skip]\"; };f"
+	fix = "!f () { git commit -m \"Fixup $1\"; };f"
 	recom = commit --amend --no-edit
 	recom-reword = commit --amend
 	con = consistent -i -t
