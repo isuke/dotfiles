@@ -15,7 +15,7 @@
 	pick = cherry-pick
 	recom = commit --amend --no-edit
 	recom-reword = commit --amend
-	con = consistent -i -t
+	con = consistent -i
 	chk = checkout
 	chk-fork = "!f () { git checkout -b ᛝ`git cbran`+$1; };f"
 	diffh = diff HEAD
