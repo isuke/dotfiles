@@ -34,6 +34,7 @@
 	slog = log --pretty=format:'%C(yellow)[%ad] %C(green)%h %Creset: %s %C(red)%D%Creset' --date=iso --decorate-refs=tags
 	slog-name = log --pretty=format:'%C(yellow)[%ad] %C(green)%h %Creset: %C(blue)%an %Creset: %s %C(red)%D%Creset' --date=iso --decorate-refs=tags
 	delete-brans = !git branch --merged | grep -v \\* | grep -v 'master\\|release' | xargs -I % git branch -d %
+	delete-remote = "!f () { git push origin :$1; };f"
 [push]
 	default = simple
 [filter "media"]
