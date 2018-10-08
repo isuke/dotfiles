@@ -43,3 +43,10 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+#
+# JupyterNotebook
+#
+
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
