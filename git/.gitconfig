@@ -23,7 +23,7 @@
 	diffc = diff --cached
 	bran = branch
 	bran-backup = !git branch ဓ`git cbran`-backup
-	cleanbran = checkout --orphan
+	plain-branch = "!f () { git checkout --orphan $1 && git rm --cached -r .; };f"
 	cbran = rev-parse --abbrev-ref HEAD
 	cancel = reset --soft HEAD^
 	cpush = !git push origin `git cbran`
