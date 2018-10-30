@@ -18,9 +18,6 @@ fi
 # shell
 cp $DOTFILES_PATH/shell/* $HOME
 
-# .zfunc
-cp -r $DOTFILES_PATH/.zfunc $HOME
-
 # git
 cp $DOTFILES_PATH/git/* $HOME
 git config --global user.name $NAME
