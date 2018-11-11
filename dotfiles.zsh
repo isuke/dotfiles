@@ -27,4 +27,7 @@ git config --global commit.template $HOME/.gitcommit_template_commitizen
 # pry
 cp $DOTFILES_PATH/pry/* $HOME
 
+# vue
+cp $DOTFILES_PATH/vue/* $HOME
+
 source $HOME/.zshrc
