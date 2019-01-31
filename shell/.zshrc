@@ -3,6 +3,13 @@ source ~/.my.zsh
 source ~/.zplug/init.zsh
 
 #
+# bind key
+#
+bindkey -e
+bindkey '\e\e[C' forward-word  # make able to use ward jump by "⌥ + →"
+bindkey '\e\e[D' backward-word # make able to use ward jump by "⌥ + ←"
+
+#
 # zplug
 #
 zplug "zplug/zplug"
