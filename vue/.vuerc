@@ -9,10 +9,7 @@
         "@vue/cli-plugin-pwa": {},
         "@vue/cli-plugin-eslint": {
           "config": "prettier",
-          "lintOn": [
-            "save",
-            "commit"
-          ]
+          "lintOn": []
         },
         "@vue/cli-plugin-unit-mocha": {},
         "@vue/cli-plugin-e2e-cypress": {},
@@ -30,10 +27,7 @@
         "@vue/cli-plugin-pwa": {},
         "@vue/cli-plugin-eslint": {
           "config": "prettier",
-          "lintOn": [
-            "save",
-            "commit"
-          ]
+          "lintOn": []
         },
         "@vue/cli-plugin-unit-mocha": {},
         "@vue/cli-plugin-e2e-cypress": {},
@@ -42,6 +36,37 @@
       },
       "router": true,
       "routerHistoryMode": false,
+      "vuex": true,
+      "cssPreprocessor": "sass"
+    },
+    "electron [plain]": {
+      "useConfigFiles": true,
+      "plugins": {
+        "@vue/cli-plugin-eslint": {
+          "config": "prettier",
+          "lintOn": []
+        },
+        "vue-cli-plugin-pug": {},
+        "vue-cli-plugin-electron-builder": {}
+      },
+      "router": true,
+      "routerHistoryMode": true,
+      "vuex": true,
+      "cssPreprocessor": "sass"
+    },
+    "electron [coffee]": {
+      "useConfigFiles": true,
+      "plugins": {
+        "@vue/cli-plugin-eslint": {
+          "config": "prettier",
+          "lintOn": []
+        },
+        "vue-cli-plugin-pug": {},
+        "vue-cli-plugin-coffee": {},
+        "vue-cli-plugin-electron-builder": {}
+      },
+      "router": true,
+      "routerHistoryMode": true,
       "vuex": true,
       "cssPreprocessor": "sass"
     }
