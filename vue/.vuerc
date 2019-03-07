@@ -2,7 +2,7 @@
   "packageManager": "yarn",
   "useTaobaoRegistry": false,
   "presets": {
-    "myDefault [plain]": {
+    "myDefault [es]": {
       "useConfigFiles": true,
       "plugins": {
         "@vue/cli-plugin-babel": {},
@@ -39,7 +39,7 @@
       "vuex": true,
       "cssPreprocessor": "sass"
     },
-    "electron [plain]": {
+    "electron [es]": {
       "useConfigFiles": true,
       "plugins": {
         "@vue/cli-plugin-eslint": {
@@ -69,6 +69,33 @@
       "routerHistoryMode": true,
       "vuex": true,
       "cssPreprocessor": "sass"
+    },
+    "minimum [es]": {
+      "useConfigFiles": true,
+      "plugins": {
+        "@vue/cli-plugin-babel": {},
+        "@vue/cli-plugin-pwa": {},
+        "@vue/cli-plugin-eslint": {
+          "config": "prettier",
+          "lintOn": []
+        },
+        "vue-cli-plugin-pug": {}
+      },
+      "cssPreprocessor": "node-sass"
+    },
+    "minimum [coffee]": {
+      "useConfigFiles": true,
+      "plugins": {
+        "@vue/cli-plugin-babel": {},
+        "@vue/cli-plugin-pwa": {},
+        "@vue/cli-plugin-eslint": {
+          "config": "prettier",
+          "lintOn": []
+        },
+        "vue-cli-plugin-pug": {},
+        "vue-cli-plugin-coffee": {}
+      },
+      "cssPreprocessor": "node-sass"
     }
   }
 }
