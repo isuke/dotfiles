@@ -81,7 +81,7 @@
         },
         "vue-cli-plugin-pug": {}
       },
-      "cssPreprocessor": "node-sass"
+      "cssPreprocessor": "sass"
     },
     "minimum [coffee]": {
       "useConfigFiles": true,
@@ -95,7 +95,7 @@
         "vue-cli-plugin-pug": {},
         "vue-cli-plugin-coffee": {}
       },
-      "cssPreprocessor": "node-sass"
+      "cssPreprocessor": "sass"
     }
   }
 }
