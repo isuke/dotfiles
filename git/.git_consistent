@@ -3,7 +3,7 @@ subject:
   required: true
   description: 'The subject contains succinct description of the change'
   rules:
-    firstLatter: upper
+    firstLatter: lower
     dotAtEnd: false
     nonAscii: false
 body:
