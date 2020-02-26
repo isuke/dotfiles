@@ -31,7 +31,7 @@
 	cpull = !git pull origin `git cbran`
 	fpull = !git fetch origin `git cbran` && git reset --hard origin/`git cbran`
 	retag = "!f () { git tag -d $1;git tag $1&&echo Create tag \\'$1\\'; };f"
-	mrg = merge --no-ff
+	mrg = merge
 	slog = log --pretty=format:'%C(yellow)[%ad] %C(green)%h %Creset: %s %C(red)%D%Creset' --date=iso --decorate-refs=tags
 	slog-name = log --pretty=format:'%C(yellow)[%ad] %C(green)%h %Creset: %C(blue)%an %Creset: %s %C(red)%D%Creset' --date=iso --decorate-refs=tags
 	delete-brans = !git branch --merged | grep -v \\* | grep -v 'master\\|release' | xargs -I % git branch -d %
