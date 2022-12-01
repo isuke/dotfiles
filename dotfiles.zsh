@@ -16,15 +16,15 @@ if [ -z "$EMAIL" ]; then
 fi
 
 # shell
-cp $DOTFILES_PATH/shell/* $HOME
+cp -r $DOTFILES_PATH/shell/. $HOME
 
 # git
-cp $DOTFILES_PATH/git/* $HOME
+cp -r $DOTFILES_PATH/git/. $HOME
 git config --global user.name $NAME
 git config --global user.email $EMAIL
 git config --global commit.template $HOME/.gitcommit_template_commitizen
 
 # pry
-cp $DOTFILES_PATH/pry/* $HOME
+cp -r $DOTFILES_PATH/pry/. $HOME
 
 source $HOME/.zshrc
