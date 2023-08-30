@@ -7,10 +7,10 @@
 	stat = status
 	com = commit
 	ini = "!f () { git init && git commit --allow-empty -m 'init'; };f"
-	wip = "!f () { git commit -m \"WIP $1\"; };f"
-	wipc = "!f () { git commit -m \"WIP $1 [ci skip]\"; };f"
+	wip = "!f () { git commit -m \"[WIP] $1\"; };f"
+	wipc = "!f () { git commit -m \"[WIP] $1 [ci skip]\"; };f"
 	ci-skip = "!f () { git reset HEAD . && git commit --allow-empty -m \"$1 [ci skip]\"; };f"
-	fix = "!f () { git commit -m \"Fixup $1\"; };f"
+	fix = "!f () { git commit -m \"[Fixup] $1\"; };f"
 	ignore-files = status --ignored
 	ignore-all-files = ls-files --other --ignored --exclude-standard
 	pick = cherry-pick
