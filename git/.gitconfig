@@ -25,7 +25,8 @@
 	bran = branch
 	bran-backup = !git branch ဓ`git cbran`-backup
 	plain-branch = "!f () { git checkout --orphan $1 && git rm --cached -r .; };f"
-	cbran = rev-parse --abbrev-ref HEAD
+	cbran = branch --show-current
+	b = "!f () { git cbran | tr -d '\n' | pbcopy; };f"
 	cancel = reset --soft HEAD^
 	cpush = !git push origin `git cbran`
 	cpull = !git pull origin `git cbran`
