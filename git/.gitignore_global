@@ -50,3 +50,9 @@ Temporary Items
 
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
+
+#
+# direnv
+#
+.envrc
+.direnv

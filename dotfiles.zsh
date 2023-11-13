@@ -27,4 +27,7 @@ git config --global commit.template $HOME/.gitcommit_template_commitizen
 # pry
 cp -r $DOTFILES_PATH/pry/. $HOME
 
+# direnv
+cp -r $DOTFILES_PATH/direnv/. $HOME
+
 source $HOME/.zshrc
