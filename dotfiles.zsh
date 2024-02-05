@@ -30,4 +30,7 @@ cp -r $DOTFILES_PATH/pry/. $HOME
 # direnv
 cp -r $DOTFILES_PATH/direnv/. $HOME
 
+# rust
+cp -r $DOTFILES_PATH/rust/. $HOME
+
 source $HOME/.zshrc
