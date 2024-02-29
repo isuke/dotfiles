@@ -4,39 +4,54 @@
 	editor = code --wait
 	excludesfile = ~/.gitignore_global
 [alias]
+	# simple abbreviation
 	stat = status
 	com = commit
-	ini = "!f () { git init && git commit --allow-empty -m 'init'; };f"
+	recom = commit --amend --no-edit
+	recom-reword = commit --amend
+	pick = cherry-pick
+	con = consistent -i
+	chk = checkout
+	bran = branch
+	cbran = branch --show-current
+	mrg = merge
+	slog = log --pretty=format:'%C(yellow)[%ad] %C(green)%h %Creset: %s %C(red)%D%Creset' --date=iso --decorate-refs=tags
+	slog-name = log --pretty=format:'%C(yellow)[%ad] %C(green)%h %Creset: %C(blue)%an %Creset: %s %C(red)%D%Creset' --date=iso --decorate-refs=tags
+
+	# easy commit and reset
 	wip = "!f () { git commit -m \"[WIP] $1\"; };f"
 	wipc = "!f () { git commit -m \"[WIP] $1 [ci skip]\"; };f"
 	ci-skip = "!f () { git reset HEAD . && git commit --allow-empty -m \"$1 [ci skip]\"; };f"
 	fix = "!f () { git commit -m \"[Fixup] $1\"; };f"
+	cancel = reset --soft HEAD^
+
+	# tag
+	retag = "!f () { git tag -d $1;git tag $1&&echo Create tag \\'$1\\'; };f"
+
+	# branch
+	chk-fork = "!f () { git checkout -b ᛝ`git cbran`+$1; };f"
+	bran-backup = !git branch ဓ`git cbran`-backup
+
+	# list files
 	ignore-files = status --ignored
 	ignore-all-files = ls-files --other --ignored --exclude-standard
-	pick = cherry-pick
-	recom = commit --amend --no-edit
-	recom-reword = commit --amend
-	con = consistent -i
-	chk = checkout
-	chk-fork = "!f () { git checkout -b ᛝ`git cbran`+$1; };f"
+
+	# diff
 	diffh = diff HEAD
 	diffhh = diff HEAD^
 	diffc = diff --cached
-	bran = branch
-	bran-backup = !git branch ဓ`git cbran`-backup
-	plain-branch = "!f () { git checkout --orphan $1 && git rm --cached -r .; };f"
-	cbran = branch --show-current
-	b = "!f () { git cbran | tr -d '\n' | pbcopy; };f"
-	cancel = reset --soft HEAD^
+
+	# pull/push
 	cpush = !git push origin `git cbran`
 	cpull = !git pull origin `git cbran`
 	fpull = !git fetch origin `git cbran` && git reset --hard origin/`git cbran`
-	retag = "!f () { git tag -d $1;git tag $1&&echo Create tag \\'$1\\'; };f"
-	mrg = merge
-	slog = log --pretty=format:'%C(yellow)[%ad] %C(green)%h %Creset: %s %C(red)%D%Creset' --date=iso --decorate-refs=tags
-	slog-name = log --pretty=format:'%C(yellow)[%ad] %C(green)%h %Creset: %C(blue)%an %Creset: %s %C(red)%D%Creset' --date=iso --decorate-refs=tags
-	delete-brans = !git branch --merged | grep -v \\* | grep -v 'master\\|main\\|release' | xargs -I % git branch -d %
-	delete-remote = "!f () { git push origin :$1; };f"
+
+	# other util
+	b = "!f () { git cbran | tr -d '\n' | pbcopy; };f"                            # copy current branch to clip board
+	ini = "!f () { git init && git commit --allow-empty -m 'init'; };f"           # initial commit
+	delete-brans = !git branch --merged | grep -v \\* | grep -v 'master\\|main\\|release' | xargs -I % git branch -d % # delete local branches that is merged
+	delete-remote = "!f () { git push origin :$1; };f"                            # delete origin branch
+	plain-branch = "!f () { git checkout --orphan $1 && git rm --cached -r .; };f" # create plain branch
 [push]
 	default = simple
 [filter "media"]
