@@ -15,6 +15,8 @@
 	bran = branch
 	cbran = branch --show-current
 	mrg = merge
+	sw = switch
+	res = restore
 	slog = log --pretty=format:'%C(yellow)[%ad] %C(green)%h %Creset: %s %C(red)%D%Creset' --date=iso --decorate-refs=tags
 	slog-name = log --pretty=format:'%C(yellow)[%ad] %C(green)%h %Creset: %C(blue)%an %Creset: %s %C(red)%D%Creset' --date=iso --decorate-refs=tags
 
