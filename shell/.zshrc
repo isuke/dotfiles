@@ -33,7 +33,16 @@ bindkey '\e\e[D' backward-word # make able to use ward jump by "⌥ + ←"
 #
 # Theme
 #
-zinit load "isuke/droolscar"
+# zinit load "isuke/droolscar"
+zinit ice from"gh-r" as"program"
+zinit load "isuke/droolmaw"
+
+prompt_precmd() {
+  PROMPT=`droolmaw`
+  PROMPT2=`droolmaw --2`
+  RPROMPT=`droolmaw --right`
+}
+add-zsh-hook precmd prompt_precmd
 
 #
 # Plugin

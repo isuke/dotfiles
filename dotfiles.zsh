@@ -24,6 +24,9 @@ git config --global user.name $NAME
 git config --global user.email $EMAIL
 git config --global commit.template $HOME/.gitcommit_template_commitizen
 
+# prompt
+cp -r $DOTFILES_PATH/prompt/. $HOME
+
 # pry
 cp -r $DOTFILES_PATH/pry/. $HOME
 

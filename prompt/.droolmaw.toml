@@ -1,0 +1,39 @@
+l_separator = ""
+r_separator = ""
+
+[[l_components_first]]
+name = "id"
+color = "Magenta"
+
+[[l_components_first]]
+name = "dir"
+color = "Blue"
+
+[[l_components_first]]
+name = "git_name"
+color = "Yellow"
+
+[[l_components_first]]
+name = "git_current_branch_and_statuses"
+color = "Green"
+
+[[l_components_first]]
+name = "git_stash"
+color = "White"
+
+[[l_components_first]]
+name = "git_remotes_and_statuses"
+color = "Cyan"
+
+[[l_components_second]]
+name = "date_time"
+color = "White"
+
+[[r_components]]
+name = "dir_path"
+color = "Blue"
+
+[[r_components]]
+name = "langs"
+color = "Magenta"
+langs = ["ruby", "node"]
