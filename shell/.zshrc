@@ -38,6 +38,7 @@ zinit ice from"gh-r" as"program"
 zinit load "isuke/droolmaw"
 
 prompt_precmd() {
+  export DROOLMAW_RETVAL=$?
   PROMPT=`droolmaw`
   PROMPT2=`droolmaw --2`
   RPROMPT=`droolmaw --right`
