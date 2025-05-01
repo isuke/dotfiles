@@ -54,6 +54,14 @@ zinit light "zsh-users/zsh-completions"
 zinit light "zsh-users/zsh-history-substring-search"
 zinit light "zsh-users/zsh-syntax-highlighting"
 
+# zsh-notify
+zinit light "marzocchi/zsh-notify"
+zstyle ':notify:*' success-title "Command finished (in #{time_elapsed} seconds)"
+zstyle ':notify:*' error-title "Command failed (in #{time_elapsed} seconds)"
+zstyle ':notify:*' success-sound "default"
+zstyle ':notify:*' error-sound "Glass"
+zstyle ':notify:*' command-complete-timeout 30
+
 #
 # My Custom
 #
