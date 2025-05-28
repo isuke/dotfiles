@@ -3,6 +3,7 @@
 [core]
 	editor = code --wait
 	excludesfile = ~/.gitignore_global
+	ignorecase = false
 [alias]
 	# simple abbreviation
 	stat = status
