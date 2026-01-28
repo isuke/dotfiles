@@ -15,6 +15,13 @@ if [ -z "$EMAIL" ]; then
   echo "export EMAIL=${EMAIL}" >> $MY_FILE_PATH
 fi
 
+if [ -z "$EDITOR" ]; then
+  echo -n "Input editor name > "
+  read EDITOR
+  echo "export EDITOR='${EDITOR} --wait'" >> $MY_FILE_PATH
+  echo "alias c='${EDITOR}'" >> $MY_FILE_PATH
+fi
+
 # shell
 cp -r $DOTFILES_PATH/shell/. $HOME
 
