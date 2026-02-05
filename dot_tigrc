@@ -1,0 +1,43 @@
+#
+# Settings
+#
+set main-view = date id author:email-user commit-title:graph=yes,refs=yes
+
+set pager-view  = line-number:yes,interval=1 text
+set stage-view  = line-number:yes,interval=1 text
+set log-view    = line-number:yes,interval=1 text
+set blob-view   = line-number:yes,interval=1 text
+set diff-view   = line-number:yes,interval=1 text:yes,commit-title-overflow=no
+
+set tab-size = 2
+
+# (Toggle by '~')
+set line-graphics = utf-8
+
+# Ignore spaces by diff (Toggle by 'W')
+set ignore-space = at-eol
+
+# Ignore case by search (default: false)
+set ignore-case = true
+
+set refresh-mode = auto
+
+set diff-options = -m --first-parent
+
+set diff-highlight = true
+
+#
+# Colors
+#
+color  diff-header       default magenta
+color  diff-chunk        black   white
+
+#
+# Key binds
+#
+# `rebase -i` by 'I'
+bind main    I      ?git rebase -i %(branch)
+bind diff    I      ?git rebase -i %(branch)
+bind refs    I      ?git rebase -i %(branch)
+bind main    <Esc>i ?git rebase -i %(commit)
+bind diff    <Esc>i ?git rebase -i %(commit)

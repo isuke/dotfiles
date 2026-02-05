@@ -1,0 +1,74 @@
+[color]
+	ui = auto
+[core]
+	editor = {{ .editor }} --wait
+	excludesfile = ~/.gitignore_global
+	ignorecase = false
+[alias]
+	# simple abbreviation
+	stat = status
+	com = commit
+	recom = commit --amend --no-edit
+	recom-reword = commit --amend
+	pick = cherry-pick
+	con = consistent -i
+	chk = checkout
+	bran = branch
+	cbran = branch --show-current
+	mrg = merge
+	sw = switch
+	res = restore
+	slog = log --pretty=format:'%C(yellow)[%ad] %C(green)%h %Creset: %s %C(red)%D%Creset' --date=iso --decorate-refs=tags
+	slog-name = log --pretty=format:'%C(yellow)[%ad] %C(green)%h %Creset: %C(blue)%an %Creset: %s %C(red)%D%Creset' --date=iso --decorate-refs=tags
+
+	# easy commit and reset
+	wip = "!f () { git commit -m \"[WIP] $1\"; };f"
+	wipc = "!f () { git commit -m \"[WIP] $1 [ci skip]\"; };f"
+	ci-skip = "!f () { git reset HEAD . && git commit --allow-empty -m \"$1 [ci skip]\"; };f"
+	fix = "!f () { git commit -m \"[Fixup] $1\"; };f"
+	cancel = reset --soft HEAD^
+
+	# tag
+	retag = "!f () { git tag -d $1;git tag $1&&echo Create tag \\'$1\\'; };f"
+
+	# branch
+	chk-fork = "!f () { git checkout -b ᛝ`git cbran`+$1; };f"
+	bran-backup = !git branch ဓ`git cbran`-backup
+
+	# list files
+	ignore-files = status --ignored
+	ignore-all-files = ls-files --other --ignored --exclude-standard
+
+	# diff
+	diffh = diff HEAD
+	diffhh = diff HEAD^
+	diffc = diff --cached
+
+	# pull/push
+	cpush = !git push origin `git cbran`
+	cpull = !git pull origin `git cbran`
+	fpull = !git fetch origin `git cbran` && git reset --hard origin/`git cbran`
+
+	# other util
+	b = "!f () { git cbran | tr -d '\n' | pbcopy; };f"                            # copy current branch to clip board
+	ini = "!f () { git init && git commit --allow-empty -m 'init'; };f"           # initial commit
+	delete-brans = !git branch --merged | grep -v \\* | grep -v 'master\\|main\\|release' | xargs -I % git branch -d % # delete local branches that is merged
+	delete-remote = "!f () { git push origin :$1; };f"                            # delete origin branch
+	plain-branch = "!f () { git checkout --orphan $1 && git rm --cached -r .; };f" # create plain branch
+[push]
+	default = simple
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[pager]
+	log = diff-highlight | less
+	show = diff-highlight | less
+	diff = diff-highlight | less
+[diff]
+	compactionHeuristic = true
+[init]
+	defaultBranch = main
+[user]
+	name = {{ .name }}
+	email = {{ .email }}

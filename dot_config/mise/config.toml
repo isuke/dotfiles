@@ -1,0 +1,8 @@
+[tools]
+ruby = "3.3.0"
+rust = "lastet"
+node = "24.1.0"
+fnox = "latest"
+
+[settings]
+experimental = true
