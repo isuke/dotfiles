@@ -1,7 +1,7 @@
 [tools]
-ruby = "3.3.0"
+ruby = "latest"
 rust = "lastet"
-node = "24.1.0"
+node = "lts"
 fnox = "latest"
 
 [settings]
