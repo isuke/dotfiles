@@ -23,12 +23,10 @@ $python\
 $ruby\
 [](fg:color_blue bg:color_bg3)\
 $docker_context\
-$conda\
-$pixi\
 [](fg:color_bg3 bg:color_bg1)\
 $time\
 $cmd_duration\
-[ ](fg:color_bg1)\
+[ ](fg:color_bg1)\
 $line_break$character"""
 
 palette = 'gruvbox_dark'
@@ -161,14 +159,6 @@ symbol = ""
 style = "bg:color_bg3"
 format = '[[ $symbol( $context) ](fg:#83a598 bg:color_bg3)]($style)'
 
-[conda]
-style = "bg:color_bg3"
-format = '[[ $symbol( $environment) ](fg:#83a598 bg:color_bg3)]($style)'
-
-[pixi]
-style = "bg:color_bg3"
-format = '[[ $symbol( $version)( $environment) ](fg:color_fg0 bg:color_bg3)]($style)'
-
 [time]
 disabled = false
 time_format = "%R"
@@ -190,5 +180,7 @@ vimcmd_visual_symbol = '[](bold fg:color_yellow)'
 [cmd_duration]
 format = "[$duration]($style)"
 style = "bg:color_bg1"
-show_milliseconds = true
+show_milliseconds = false
+show_notifications = true
 min_time = 1_000
+min_time_to_notify = 30_000
