@@ -26,6 +26,8 @@ alias tunzip='tar xvf'
 alias less='less -N -S -#4'
 
 # editor
+export EDITOR='{{ .editor }} --wait'
+
 alias e={{ .editor }}
 alias ee='{{ .editor }} .'
 
