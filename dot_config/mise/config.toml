@@ -1,6 +1,6 @@
 [tools]
 ruby = "latest"
-rust = "lastet"
+rust = "latest"
 node = "lts"
 fnox = "latest"
 
