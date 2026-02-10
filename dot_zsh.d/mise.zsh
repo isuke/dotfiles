@@ -1,3 +1,3 @@
-if which ~/.local/bin/mise > /dev/null; then
-  eval "$(~/.local/bin/mise activate zsh)"
+if which mise > /dev/null; then
+  eval "$(mise activate zsh)"
 fi
