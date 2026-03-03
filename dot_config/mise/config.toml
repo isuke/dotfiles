@@ -1,7 +1,7 @@
 [tools]
-ruby = "latest"
+ruby = { version = "latest", postinstall = "gem install solargraph" }
 rust = "latest"
-node = "lts"
+node = { version = "lts", postinstall = "npm install -g git-consistent" }
 fnox = "latest"
 
 [settings]
