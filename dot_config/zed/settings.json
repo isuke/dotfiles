@@ -61,6 +61,6 @@
     "dark": "One Dark",
   },
   "edit_predictions": {
-    "provider": "zed",
+    "provider": "copilot",
   },
 }
