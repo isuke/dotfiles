@@ -1,0 +1,28 @@
+{
+  "Print to console": {
+    "prefix": "debug",
+    "body": [
+      "puts '<' * 100",
+      "p $1",
+      "puts '>' * 100",
+      "$2"
+    ],
+    "description": "Log output to console"
+  },
+  "time to console": {
+    "prefix": "debug",
+    "body": [
+      "time = Benchmark.bm do |x|",
+      "  x.report \"hoge\" do",
+      "    $1",
+      "  end",
+      "end",
+      "",
+      "puts '<' * 100",
+      "p time",
+      "puts '>' * 100",
+      "$2"
+    ],
+    "description": "Time output to console"
+  }
+}

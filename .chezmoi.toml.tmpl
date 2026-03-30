@@ -1,8 +1,10 @@
 {{- $name := promptStringOnce . "name" "What is your name" -}}
 {{- $email := promptStringOnce . "email" "What is your email address" -}}
 {{- $editor := promptStringOnce . "editor" "What editor are you using" -}}
+{{- $isConfidential := promptStringOnce . "isConfidential" "Is confidential your computer (true/false)" -}}
 
 [data]
 name = {{ $name | quote }}
 email = {{ $email | quote }}
 editor = {{ $editor | quote }}
+isConfidential = {{ $isConfidential }}

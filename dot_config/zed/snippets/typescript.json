@@ -1,0 +1,23 @@
+{
+  "Print to console": {
+    "prefix": "debug",
+    "description": "Log output to console",
+    "body": [
+      "console.log(\"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\");",
+      "console.log($1);",
+      "console.log(\">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\");",
+      "$2"
+    ]
+  },
+  "Time to console": {
+    "prefix": "time",
+    "description": "Time output to console",
+    "body": [
+      "console.log(\"hoge: start\")",
+      "console.time(\"hoge\")",
+      "$2",
+      "console.timeEnd(\"hoge\")",
+      "$3"
+    ]
+  }
+}
